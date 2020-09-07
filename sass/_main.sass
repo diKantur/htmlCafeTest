@@ -1,0 +1,93 @@
+*, *:before, *:after
+  +null('Montserrat')
+  @extend %norm-text
+
+body
+  +clr_bg($clr, $white)
+  +font(13px, 500, 2.31, -0.33px)
+  font-family: Montserrat
+
+  h1
+    +font(62px, 700, 1.26, -1.55px)
+    margin-bottom: 50px
+    @media (max-width: 767px) 
+      +font(48px, 700, 1.26, -1.55px)
+
+  h2
+    +font(40px, 700, 1.25, -1px)
+    max-width: 400px
+    margin-bottom: 60px
+
+  h3
+    +font(25px, 700, 1.25, -0.63px)
+
+nav, header, footer, section
+  +df
+  +flex(center, center)
+
+.content
+  +df
+  +flex(center, center)
+
+.logo
+  +font(25px, 700, $ls: -0.63px)
+b
+  +font($wt: 700)
+
+p
+  +font(13px, 500, 2.31, -0.33px)
+  max-width: 550px
+  margin-bottom: 20px
+
+a, .btn, .yellow-bg
+  +clr_bg($clr)
+
+.yellow-bg
+  +clr_bg($clr, $sunflower-bg)
+.white-bg
+  +clr_bg($clr, $white)
+.dark-bg
+  +clr_bg($white, $clr)
+.btn
+  +mp($p: 10px 15px)
+  +df
+  +flex(center, center)
+
+
+
+.searcher, .subscriber
+  +position(relative)
+  +size(481px, 71px)
+  display: inline-block
+  input
+    +size(100%, 100%)
+    +font(15px, $ls: -0.38px)
+    +clr_bg($blue-dark, $white)
+  button
+    +df
+    +flex(center, center)
+    +position(absolute, 0, 0, 0)
+    +font(15px, 600, $ls: -0.38px)
+    color: $clr
+
+
+
+.searcher
+  &::before
+    +position(absolute, $l: 25px, $b: 20px, $z: 1)
+    +size(25px, 25px)
+    background: url('../img/search.svg') no-repeat center center
+  input
+    +position(relative)
+    +mp($p: 30px 60px)
+    border-radius: 5px
+
+  button
+    border-radius: 0 5px 5px 0
+.subscriber
+  border-radius: none
+  input
+    +mp($p: 30px)
+
+.owl-nav
+  display: none

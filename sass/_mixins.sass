@@ -1,0 +1,41 @@
+=mp($m: 0, $p: 0)
+  margin: $m
+  padding: $p
+
+=size($w: auto, $h: auto)
+  width: $w
+  height: $h
+
+=clr_bg($clr: inherit, $bg: transparent)
+  color: $clr
+  background: $bg
+
+
+=font($sz: inherit, $wt: normal, $lh: inherit, $ls: normal)
+  font-size: $sz
+  font-weight: $wt
+  line-height: $lh
+  letter-spacing: $ls
+
+=position($p, $t: auto, $r: auto, $b: auto, $l: auto, $c: '', $z: auto)
+  position: $p
+  content: $c
+  top: $t
+  right: $r
+  bottom: $b
+  left: $l
+  z-index: $z
+
+=df($d: nowrap, $w: row)
+  display: flex
+  flex-direction: $d
+  flex-wrap: $w
+
+=flex($a: stretch, $j: flex-start)
+  align-items: $a
+  justify-content: $j
+
+=null($font: "'Exo', 'Roboto', sans-serif")
+  box-sizing: border-box
+  font-family: $font
+  +mp
